@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
+<<<<<<< HEAD
       xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml"
 >
+=======
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+>>>>>>> 2b596f2 (init)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +14,11 @@
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
 </head>
+<<<<<<< HEAD
 <body style="color: darkred; background-color: lightslategrey">
+=======
+<body>
+>>>>>>> 2b596f2 (init)
 <h1 th:text="${user.getUsername()} + '  ' + ${titleTable} + '  ' + ${user.getName()} + '  ' + ${user.getRolesInString()}"/>
 <table class="table">
     <thead>
@@ -39,7 +47,11 @@
 <br>
 <div sec:authorize="hasRole('ROLE_ADMIN')">
     <form action="/admin" target="_self">
+<<<<<<< HEAD
         <button style="background-color: royalblue; border-color: royalblue; color: white">Вернуться к списку пользователей</button>
+=======
+        <button>Вернуться к списку пользователей</button>
+>>>>>>> 2b596f2 (init)
     </form>
 </div>
 <form th:action="@{/logout}" th:method="post" target="_self">

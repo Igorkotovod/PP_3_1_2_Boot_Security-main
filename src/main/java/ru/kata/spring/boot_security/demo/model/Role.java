@@ -9,7 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+<<<<<<< HEAD
 import java.util.Objects;
+=======
+>>>>>>> 2b596f2 (init)
 import java.util.Set;
 
 @Entity
@@ -70,7 +73,11 @@ public class Role implements GrantedAuthority {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Role role = (Role) o;
+<<<<<<< HEAD
         return Objects.equals(name, role.name);
+=======
+        return name != null ? name.equals(role.name) : role.name == null;
+>>>>>>> 2b596f2 (init)
     }
     @Override
     public int hashCode() {

@@ -15,7 +15,10 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import java.util.Collection;
+<<<<<<< HEAD
 import java.util.Objects;
+=======
+>>>>>>> 2b596f2 (init)
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -149,6 +152,7 @@ public class User implements UserDetails {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
+<<<<<<< HEAD
         if (!Objects.equals(id, user.id)) return false;
         if (!Objects.equals(age, user.age)) return false;
         if (!Objects.equals(name, user.name)) return false;
@@ -156,6 +160,15 @@ public class User implements UserDetails {
         if (!Objects.equals(username, user.username)) return false;
         if (!Objects.equals(password, user.password)) return false;
         return Objects.equals(roles, user.roles);
+=======
+        if (id != null ? !id.equals(user.id) : user.id != null) return false;
+        if (age != null ? !age.equals(user.age) : user.age != null) return false;
+        if (name != null ? !name.equals(user.name) : user.name != null) return false;
+        if (last_name != null ? !last_name.equals(user.last_name) : user.last_name != null) return false;
+        if (username != null ? !username.equals(user.username) : user.username != null) return false;
+        if (password != null ? !password.equals(user.password) : user.password != null) return false;
+        return roles != null ? roles.equals(user.roles) : user.roles == null;
+>>>>>>> 2b596f2 (init)
     }
     @Override
     public int hashCode() {
