@@ -39,7 +39,7 @@ public class AdminController {
     @GetMapping("/{id}")
     public String showUser(Model model, @PathVariable("id") Long id) {
         model.addAttribute("user", userService.getUser(id));
-        model.addAttribute("titleTable", "Страница пользователя:");
+        model.addAttribute("titleTable", "Страница пользователя ");
         return "user";
     }
 
